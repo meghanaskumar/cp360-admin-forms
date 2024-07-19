@@ -139,12 +139,12 @@
                 $('#fields-container').append(`
                     <div class="mb-4 field-row-${index}">
                         <div class="flex flex-wrap w-full">
-                            <div class="w-full px-2 mb-4">
+                            <div class="w-1/3 px-2 mb-4">
                                 <label class="block mb-2 text-sm font-bold">Label:</label>
                                 <input type="text" name="fields[${index}][label]" placeholder="Enter Field Name"
                                     class="w-full px-3 py-2 border rounded">
                             </div>
-                            <div class="w-full px-2 mb-4">
+                            <div class="w-1/3 px-2 mb-4">
                                 <label class="block mb-2 text-sm font-bold">Type:</label>
                                 <select name="fields[${index}][type]"
                                     class="w-full px-3 py-2 border rounded shadow field-type" data-index="${index}">
@@ -153,7 +153,7 @@
                                     <option value="select">Select</option>
                                 </select>
                             </div>
-                            <div class="w-full px-2 mb-4">
+                            <div class="w-1/3 px-2 mb-4">
                                 <div class="options-container" data-index="${index}" style="display: none;">
                                     <label class="block mb-2 text-sm font-bold">Options:</label>
                                     <div class="option-group" data-index="${index}">
