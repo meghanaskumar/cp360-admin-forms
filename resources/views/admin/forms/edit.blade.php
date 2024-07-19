@@ -45,7 +45,7 @@
                 @endif
 
                 <form method="POST" action="{{ route('forms.update', $form) }}"
-                    class="max-w-lg px-8 py-6 pt-6 pb-8 mx-auto mb-4 bg-white rounded shadow-md">
+                    class="px-8 py-6 pt-6 pb-8 mx-auto mb-4 bg-white rounded shadow-md max-w">
                     @csrf
                     @method('PUT')
 
@@ -61,13 +61,13 @@
                         @foreach ($form->fields as $index => $field)
                             <div class="mb-4 field-row-{{ $index }}">
                                 <div class="flex flex-wrap w-full">
-                                    <div class="w-full px-2 mb-4">
+                                    <div class="w-1/3 px-2 mb-4">
                                         <label class="block mb-2 text-sm font-bold">Label:</label>
                                         <input type="text" name="fields[{{ $index }}][label]"
                                             value="{{ $field->label }}" class="w-full px-3 py-2 border rounded"
                                             placeholder="Label">
                                     </div>
-                                    <div class="w-full px-2 mb-4">
+                                    <div class="w-1/3 px-2 mb-4">
                                         <label class="block mb-2 text-sm font-bold">Type:</label>
                                         <select name="fields[{{ $index }}][type]"
                                             class="w-full px-3 py-2 border rounded shadow field-type"
@@ -81,7 +81,7 @@
                                                 Select</option>
                                         </select>
                                     </div>
-                                    <div class="w-full px-2 mb-4">
+                                    <div class="w-1/3 px-2 mb-4">
                                         <div class="options-container"
                                             style="@if ($field->type != 'select') display: none; @endif"
                                             data-index="{{ $index }}">
@@ -97,11 +97,12 @@
                                                         data-index="{{ $index }}">-</button>
                                                 </div>
                                             @endforeach
-                                            <button type="button" class="px-4 mt-2 font-bold rounded-lg add-option bg-color-green"
+                                            <button type="button"
+                                                class="px-4 mt-2 font-bold rounded-lg add-option bg-color-green"
                                                 data-index="{{ $index }}">+</button>
                                         </div>
                                     </div>
-                                    <div class="w-full px-2">
+                                    <div class="w-1/3 px-2">
                                         <button type="button"
                                             class="px-4 py-2 mt-2 font-bold rounded-lg remove-field bg-color-red"
                                             data-index="{{ $index }}">Remove Field</button>
@@ -113,12 +114,15 @@
 
                     <div class="flex justify-between">
                         <div>
-                            <button type="button" id="add-field" class="px-4 py-2 mt-2 font-bold rounded-lg bg-color-green">+ Add
+                            <button type="button" id="add-field"
+                                class="px-4 py-2 mt-2 font-bold rounded-lg bg-color-green">+ Add
                                 Field</button>
-                            <button type="submit" class="px-4 py-2 mt-2 font-bold rounded-lg bg-color-blue">Update</button>
+                            <button type="submit"
+                                class="px-4 py-2 mt-2 font-bold rounded-lg bg-color-blue">Update</button>
                         </div>
                         <div>
-                            <a href="{{ route('forms.index') }}" class="px-4 py-2 mt-2 font-bold rounded-lg bg-color">Back</a>
+                            <a href="{{ route('forms.index') }}"
+                                class="px-4 py-2 mt-2 font-bold rounded-lg bg-color">Back</a>
                         </div>
                     </div>
                 </form>

@@ -10,7 +10,17 @@ uncomment the following from .env
 # DB_USERNAME=root
 # DB_PASSWORD=
 
-navigate to your `admin-forms` project folder
+and set
+
+DB_CONNECTION=mysql
+
+php artisan key:generate
+
+
+navigate to  project folder
+
+composer install
+
 
 php artisan migrate // do the migrations
 

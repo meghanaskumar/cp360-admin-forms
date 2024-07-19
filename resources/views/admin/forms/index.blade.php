@@ -34,8 +34,8 @@
                 <table class="table w-full mt-3 border border-collapse border-gray-200">
                     <thead>
                         <tr class="bg-gray-100">
-                            <th class="px-4 py-2 text-left">Name</th>
-                            <th class="px-4 py-2 text-left">Actions</th>
+                            <th class="px-4 py-2 text-center">Name</th>
+                            <th class="px-4 py-2 text-center">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
