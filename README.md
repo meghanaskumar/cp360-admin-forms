@@ -20,6 +20,10 @@ npm install && npm run build
 
 php artisan serve // will point to a url where the application loads
 
+php artisan queue:table
+
+php artisan migrate
+
 php artisan queue:work //for sending an email notification via job on queue after creation of dynamic forms
 
 When the Application loads, Login using :
