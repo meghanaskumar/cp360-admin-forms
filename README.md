@@ -1,4 +1,4 @@
-Git checkout the project
+git clone https://github.com/meghanaskumar/cp360-admin-forms.git
 
 copy .env.example and create .env
 
